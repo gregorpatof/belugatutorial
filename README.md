@@ -23,8 +23,24 @@ git clone https://github.com/gregorpatof/belugatutorial
 
 sbatch beluga_job_whole_node.sh
 
-7. You can see if your job is running with:
+7. You can see if your job is running (and all running and queued jobs from our group) with:
 
 sq
 
-8.
+8. When sq does not show your job anymore, it is done! You can find its output in the directory you started it from. It contains 100 very big prime numbers (which are to be treated with respect as they are special entities) and will looking something like:
+
+slurm-xxxxxxx.out
+
+9. xxxxxxx is the job number. With this number you can info on the job's running time and efficiency (both CPU and memory) with the command:
+
+seff xxxxxxxx
+
+Note: usually the memory efficiency of jobs is very low, and that is perfectly fine. It just means that what you are doing is more compute-intense than memory-intense. However, if your CPU efficiency is below around 50%, it probably means that you are doing too much input-output or that your parallelization scheme is not working.
+
+That's all folks! Now you should be ready to run parallel jobs on Beluga using Python :-)
+
+P.S. Remember to periodically check our usage of the allocation with:
+
+sshare -A rrg-najmanov_cpu -l
+
+The column we care about is LevelFS, and as long as it is bigger than 1 we can submit as many jobs as we like.

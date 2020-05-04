@@ -32,9 +32,10 @@ def find_n_primes(n_primes, n_processors=40):
     results = p.map(execute, all_commands)
 
     # results is now a list of CompletedProcess objects, so we need to fetch the stdout attribute
-    results = [x.stdout.decode('utf-8') for x in results]
+    results = [x.stdout.decode('utf-8').strip() for x in results]  # strip() removes the newline
     return results
 
 
 if __name__ == "__main__":
-    print(find_n_primes(100))
+    for x in find_n_primes(100):
+        print(x)
