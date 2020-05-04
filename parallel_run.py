@@ -19,7 +19,7 @@ def execute(command_string, working_directory=None, capture_output=True):
 
 
 def find_n_primes(n_primes, n_processors=40):
-    """ Function that finds n prime numbers with a very naive algorithm (as an example of somewhat costly computation.
+    """ Function that finds n prime numbers with a very naive algorithm (as an example of somewhat costly computation).
         It picks n random starting numbers between 50000000000000000 and 100000000000000000, and finds the first prime
         bigger or equal to each of these random numbers by making a system call to the prime_testing.py script.
     """
