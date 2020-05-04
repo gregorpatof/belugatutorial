@@ -4,7 +4,7 @@
 #SBATCH --exclusive
 #SBATCH --mem=0
 #SBATCH --account=rrg-najmanov
-# SBATCH --time=3:00:00
+#SBATCH --time=3:00:00
 
 module purge
 module load python/3
