@@ -17,7 +17,7 @@ git clone https://github.com/gregorpatof/belugatutorial
 
 4. Look at the beluga_job_whole_node.sh file. This is the job file that you need to submit to run on Beluga. It uses Slurm. The lines starting with #SBATCH are the parameters for the job. You should not need to change the first 5 ones. The --time one is in hours:minutes:seconds. When you run a short job you should always put 3:00:00 because it will not affect your priority and will also not overbill us (only the resources actually used are billed). You can also give the job a name with --name=something.
 
-5. Change the path to the parallel_run.py file in the job file so that it matches the location of your file.
+5. In the job file, change the path to the parallel_run.py file so that it matches the location of your file.
 
 6. Now you can submit the job with:
 
@@ -27,7 +27,7 @@ sbatch beluga_job_whole_node.sh
 
 sq
 
-8. When sq does not show your job anymore, it is done! You can find its output in the directory you started it from. It contains 100 very big prime numbers (which are to be treated with respect as they are special entities) and will looking something like:
+8. When sq does not show your job anymore, it is done! You can find its output in the directory you started it from. It contains 100 very big prime numbers (which are to be treated with respect as they are rare entities) and will be looking something like:
 
 slurm-xxxxxxx.out
 
