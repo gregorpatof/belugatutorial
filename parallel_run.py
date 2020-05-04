@@ -37,5 +37,5 @@ def find_n_primes(n_primes, n_processors=40):
 
 
 if __name__ == "__main__":
-    for p in find_n_primes(100):
-        print(p)
+    for prime in find_n_primes(100):
+        print(prime)
