@@ -23,7 +23,7 @@ git clone https://github.com/gregorpatof/belugatutorial
 
 sbatch beluga_job_whole_node.sh
 
-7. You can see if your job is running (and all running and queued jobs from our group) with:
+7. You can see if your job is running with:
 
 sq
 
@@ -31,7 +31,7 @@ sq
 
 slurm-xxxxxxx.out
 
-9. xxxxxxx is the job number. With this number you can info on the job's running time and efficiency (both CPU and memory) with the command:
+9. xxxxxxx is the job number. With this number you can get info on the job's running time and efficiency (both CPU and memory) with the command:
 
 seff xxxxxxxx
 
