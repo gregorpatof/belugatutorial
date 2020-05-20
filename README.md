@@ -11,7 +11,7 @@ Here are the steps required to run this tutorial:
 git clone https://github.com/gregorpatof/belugatutorial
 
 
-2. Look at the code in prime_testing.py. This is the equivalent of your executable or script that will be run in parallel. In this case, it is only a very naive way of finding the biggest prime number bigger or equal to the number passed as a comman-line argument.
+2. Look at the code in prime_testing.py. This is the equivalent of your executable or script that will be run in parallel. In this case, it is only a very naive way of finding the smallest prime number bigger or equal to the number passed as a command-line argument.
 
 3. Look at the parallel_run.py file. This is where the multiprocessing happens. The execute function is called in parallel with a Pool object, which will run it for every argument passed but with a maximum number of concurrent instances (in this example 40 because it is the number of CPUs in on compute node on Beluga).
 
